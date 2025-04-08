@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        header .search-bar {
+            display: flex;
+        }
+
+        header .search-bar input {
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        header .search-bar button {
+            padding: 5px 10px;
+            font-size: 16px;
+            border: none;
+            background-color: #555;
+            color: white;
+            border-radius: 3px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        header .cart a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        header .Home a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            font-size: 16px;
+            color: #888;
+        }
+
+        .product-card button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"> <img src="logo.png" style="width: 60px; height: 50px;" alt="logo" ></div>
+        <div class="logo"> <i>Shopping</i></div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="sale.html">Sale</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for products, brands and more">
+            <button onclick="searchProducts()">Search</button>
+        </div>
+        <div class="cart">
+            <a href="#">Cart</a>
+        </div>
+    </header>
+    <main>
+        <section class="products" id="product-list">
+            <div class="product-card">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.mdeAPwmrYyeE4lUKTU7bXgHaHa&pid=Api&P=0&h=180" alt="Product 1">
+                <h3>Home Decor Hanging</h3>
+                <p>$29.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.BixtmnjNx5LjJqVx7h2JzgHaEK&pid=Api&P=0&h=180" alt="Product 2">
+                <h3>Kumkum Container</h3>
+                <p>$49.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.KQ5z2siybvkyImsAdMp3GgHaEd&pid=Api&P=0&h=180" alt="Product 3">
+                <h3>Jute Handbags</h3>
+                <p>$19.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.9Vx_H1h7_Zbqc3k-RV_v2gHaFS&pid=Api&P=0&h=180" alt="Product 4">
+                <h3>Jute Carrybag</h3>
+                <p>$39.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.cEsCy3-BEiP8dSnnWlUNdQHaHa&pid=Api&P=0&h=180" alt="Product 5">
+                <h3>Wire Crafted Dog</h3>
+                <p>$39.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.G2gjUTXtLxJ8qxYs7hwEOgHaFj&pid=Api&P=0&h=180" alt="Product 6">
+                <h3>Home Decor Tree</h3>
+                <p>$39.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.AU8dN74SFbGwskSXppYRIQHaGY&pid=Api&P=0&h=180" alt="Product 7">
+                <h3>Pearls Bracelet</h3>
+                <p>$39.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.bTpME9QmBpkc_yqUa54LwQHaEK&pid=Api&P=0&h=180" alt="Product 8">
+                <h3>Plastic Bottle Pots</h3>
+                <p>$39.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.tMl-X9U5au-y4y9gphxaXQHaFQ&pid=Api&P=0&h=180" alt="Product 9">
+                <h3>Plastic Bottle Pots</h3>
+                <p>$39.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.w-3ESA1xggtl59gGx0WP4QHaHa&pid=Api&P=0&h=180" alt="Product 10">
+                <h3>Handbag</h3>
+                <p>$39.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.LvqOe0Qca60WGaJy9x8A2wHaE7&pid=Api&P=0&h=180" alt="Product 11">
+                <h3>Clay Vessel</h3>
+                <p>$39.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.ttbHTSrqEYX4WixiMWe8wgHaEp&pid=Api&P=0&h=180" alt="Product 12">
+                <h3>Handmade Necklace</h3>
+                <p>$39.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function searchProducts() {
+            const input = document.getElementById('search-input').value.toLowerCase();
+            const productCards = document.querySelectorAll('.product-card');
+
+            productCards.forEach(card => {
+                const productName = card.querySelector('h3').textContent.toLowerCase();
+                if (productName.includes(input)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        document.getElementById('search-input').addEventListener('keyup', searchProducts);
+    </script>
+</body>
+</html>
+
