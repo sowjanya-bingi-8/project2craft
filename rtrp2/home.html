@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <title>Craftify web</title>
+    <link rel="stylesheet" href="home.css">
+   
+</head>
+<body>
+    
+    <div class="navbar">
+        <img src="logo.png" style="width: 60px; height: 50px;" alternate="logo" >
+      <div class="logo"> <i>Craftify</i></div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="shopping.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button   onclick="window.location.href='signup.html'" class="signin"><a><select id="login" name="login">
+                <option value="SIGN UP"  >Sign up</option>
+               
+               
+              </select></a></button></li>
+        </ul>
+    </div>
+<div class="textarea">
+    <div class="content">
+       
+        <p class="textp"><i>Let the artist in you Flourish!!</i></p>
+        
+    </div></div>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Chat with bot",
+      "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+      "botId": "46a3f417-09cb-46d9-9bd8-b940ecd4c04b",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "46a3f417-09cb-46d9-9bd8-b940ecd4c04b",
+      "webhookId": "87cb9de7-352f-4862-91ec-facc2d0f35d9",
+      "lazySocket": true,
+      "themeName": "prism",
+      "frontendVersion": "v1",
+      "useSessionStorage": true,
+      "showBotInfoPage": true,
+      "enableConversationDeletion": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": []
+  });
+</script>
+       
+</body>
+<footer>
+    <p>© 2024 Craftify Limited. All rights reserved.</p> 
+    <button class="like">LIKE</button>
+</footer>
+
+</html>
+
